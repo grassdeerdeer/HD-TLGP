@@ -81,7 +81,7 @@ def define_gp(X_train,y,d,k=0.4):
 
 
     # 注册表达式生成器，使用ramped half-and-half方法，并指定最大深度为4
-    toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_= 3 )
+    toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_= 4 )
 
     # 注册个体生成器，使用表达式生成器，并将结果转换为个体类
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
